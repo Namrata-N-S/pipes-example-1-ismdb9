@@ -1,0 +1,11 @@
+.delete {
+  color: red;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.red {
+  background-color: red;
+}

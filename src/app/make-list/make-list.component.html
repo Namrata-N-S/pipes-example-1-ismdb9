@@ -1,0 +1,11 @@
+<button class="add-to-list" (click)="makeList(itemToadd.value)">Add Item</button><br>
+<label for="add=item">Enter the to do item:</label>
+<input class="user-input" placeholder="Add Item" id="add-item" [(ngModel)]="newItem" #itemToadd value={{newItem}}>
+
+
+
+<div *ngIf="addItem">
+  <div *ngFor="let item of addItem;let indexOfelement=index;" class="new-item" #addedItem>
+    {{item}} <button class="delete" (click)="addedItem.classList.toggle('strike')">X</button>
+  </div>
+</div>
