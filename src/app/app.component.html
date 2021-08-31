@@ -1,6 +1,8 @@
 <hello name="{{ name }}"></hello>
+{{name}}
+<input type="text" [(ngModel)]="name">
 <p>
   Start editing to see some magic happen :)
 </p>
 
-<app-make-list></app-make-list>
+<app-make-list [myName]="name" (newItemAdded)="displayNew($event) "></app-make-list>
