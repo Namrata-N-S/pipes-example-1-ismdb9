@@ -1,10 +1,15 @@
 <hello name="{{ name }}"></hello>
-{{name}}
+{{ name }}
 <input type="text" [(ngModel)]="name" />
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Start editing to see some magic happen :)</p>
 
-<app-make-list [myName]="name" (newItemAdded)="displayNew($event) ">
-  <p class="red">This is the projected content: My name is {{name}}</p>
+<app-make-list [myName]="name" (newItemAdded)="displayNew($event)">
+  <h1 class="first">My Component 1</h1>
+  <h2 class="second">second ng content</h2>
+  <p class="red">This is the projected content: My name is {{ name }}</p>
 </app-make-list>
+
+<app-make-list
+  ><h1 class="first">My Component 2</h1>
+  <h2 class="first">second ng content</h2></app-make-list
+>

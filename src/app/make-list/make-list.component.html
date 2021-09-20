@@ -7,22 +7,20 @@
   id="add-item"
   [(ngModel)]="newItem"
   #itemToadd
-  value="{{newItem}}"
+  value="{{ newItem }}"
 />
-
+<ng-content select=".first"></ng-content>
 <div *ngIf="addItem">
   <div
-    *ngFor="let item of addItem;let indexOfelement=index;"
+    *ngFor="let item of addItem; let indexOfelement = index"
     class="new-item"
     #addedItem
   >
-    {{item}}
+    {{ item }}
     <button class="delete" (click)="addedItem.classList.toggle('strike')">
       X
     </button>
   </div>
 </div>
 
-{{myName}}
-
-<ng-content></ng-content>
+<ng-content select=".second"></ng-content>
