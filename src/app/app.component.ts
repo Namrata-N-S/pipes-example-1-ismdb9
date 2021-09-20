@@ -7,6 +7,9 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
+  userObj = {
+    name: "Namrata"
+  }
   displayNew = function(e) {
     this.name = e;
   };

@@ -2,8 +2,12 @@
 {{ name }}
 <input type="text" [(ngModel)]="name" />
 <p>Start editing to see some magic happen :)</p>
-
-<app-make-list [myName]="name" (newItemAdded)="displayNew($event)">
+<input type="text" [(ngModel)]="userObj.name" />
+<app-make-list
+  [myName]="name"
+  [myObj]="userObj"
+  (newItemAdded)="displayNew($event)"
+>
   <h1 class="first">My Component 1</h1>
   <h2 class="second">second ng content</h2>
   <p class="red">This is the projected content: My name is {{ name }}</p>
